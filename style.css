@@ -89,7 +89,6 @@ p.subtitle {
     transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/* Inner Border Frame on Hover */
 .pin::before {
     content: '';
     position: absolute;
@@ -104,7 +103,6 @@ p.subtitle {
     opacity: 1;
 }
 
-/* --- FULL IMAGE BOX --- */
 .pin-image {
     display: flex;
     flex-direction: column;
@@ -194,6 +192,50 @@ p.subtitle {
     border-color: rgba(0,0,0,0.1);
 }
 
+.pin-magazine {
+    padding: 2.5rem;
+    display: block;
+    position: relative;
+    color: #fff; 
+    grid-row: span 2 !important; 
+}
+
+.pin-magazine .magazine-img {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28%;
+    height: auto;
+    object-fit: contain;
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.pin-magazine .pin-content {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pin-magazine .pin-title {
+    text-align: left; 
+    font-size: 5rem; 
+    margin-bottom: 1rem;
+    width: 100%;
+    line-height: 0.9;
+}
+
+.pin-magazine .pin-desc {
+    font-size: 0.8rem;
+    column-count: 2; 
+    column-gap: 35%; 
+    text-align: justify;
+    margin-top: 0;
+    flex-grow: 1;
+}
+
 .bg-olive { background-color: var(--accent-olive); }
 .bg-terracotta { background-color: var(--accent-terracotta); }
 .bg-sand { background-color: var(--accent-sand); color: var(--text-color); }
@@ -249,6 +291,29 @@ p.subtitle {
 .size-big { grid-column: span 2; grid-row: span 2; }
 .size-tall { grid-column: span 1; grid-row: span 2; }
 .size-wide { grid-column: span 2; grid-row: span 1; }
+
+.content-flex-between {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.row-between {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.border-white { border-color: white !important; }
+.border-none { border: none !important; }
+.border-dark { border-color: #333 !important; }
+
+.text-dark { color: #333 !important; }
+.number-faint { color: rgba(255,255,255,0.1) !important; }
+.desc-center-faint {
+    text-align: center;
+    opacity: 0.7;
+}
 
 @media (max-width: 1024px) {
     .mood-board { grid-template-columns: repeat(3, 1fr); }
